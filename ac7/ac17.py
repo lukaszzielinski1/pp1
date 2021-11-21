@@ -1,0 +1,5 @@
+f=open("countries.txt","r")
+e=open("copy.txt","w")
+e.write(f.read())
+f.close()
+e.close()
