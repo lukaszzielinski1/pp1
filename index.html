@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            padding:100px;
+        }
+        .form-control{
+            width:30% !important;
+            border:1px solid pink !important; 
+        }
+    </style>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, slay.</title>
+  </head>
+  <body>
+    <h1>Dane:</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputNazwaFirmy1">Nazwa firmy</label>
+            <input type="text" class="form-control" id="firma" placeholder="Nazwa firmy" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputNip1">NIP</label>
+            <input type="number" class="form-control" id="nip" placeholder="NIP" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputMiasto1">Miasto</label>
+            <input type="text" class="form-control" id="miasto" placeholder="Miasto" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputUlica1">Ulica</label>
+            <input type="text" class="form-control" id="ulica" placeholder="Ulica" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputDom1">Numer domu</label>
+            <input type="number" class="form-control" id="dom" placeholder="Numer domu" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputMieszkanie1">Numer mieszkania</label>
+            <input type="number" class="form-control" id="mieszkanie" placeholder="Numer domu">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputKodPocztowy1">Kod pocztowy</label>
+            <input type="text" class="form-control" id="kod" placeholder="Kod pocztowy" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlUwaga1">Uwagi</label>
+            <textarea class="form-control" id="uwagi" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Branża</label>
+            <select class="form-control" id="branza" required>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            </select>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="aktywny" required>
+            <label class="form-check-label" for="defaultCheck1" >
+              Aktywny
+            </label>
+          </div>
+    </form>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button onclick = "save()">Przyci$k</button>
+    <button onclick = "write_data()">Hell yeah!</button>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+  <footer>
+    <script>
+        function save(){
+            let newCustomer = {
+                firma:document.getElementById('firma').value,
+                nip:document.getElementById('nip').value,
+                miasto:document.getElementById('miasto').value,
+                ulica:document.getElementById('ulica').value,
+                dom:document.getElementById('dom').value,
+                mieszkanie:document.getElementById('mieszkanie').value,
+                kod:document.getElementById('kod').value,
+                uwagi:document.getElementById('uwagi').value,
+                branza:document.getElementById('branza').value,
+                aktywny:document.getElementById('aktywny').checked
+            }
+            console.log(newCustomer);
+        }
+
+        function write_data(){
+            document.getElementById('firma').value="PolexPol"
+            document.getElementById('nip').value="1629"
+            document.getElementById('miasto').value="Zbąszynek"
+            document.getElementById('ulica').value="Gnioczyslawa Knysznego"
+            document.getElementById('dom').value="4"
+            document.getElementById('mieszkanie').value="20"
+            document.getElementById('kod').value="16-290"
+            document.getElementById('uwagi').value="Siema eniu"
+            document.getElementById('branza').value=3
+            document.getElementById('aktywny').checked=true
+        }
+        
+    </script>
+  </footer>
+</html>     
